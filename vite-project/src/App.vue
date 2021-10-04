@@ -11,14 +11,23 @@
 // https://v3.cn.vuejs.org/api/sfc-script-setup.html#%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95
 /*  */
 import { ref, onMounted } from 'vue';
+// import { useStore } from 'vuex';
+import { useStore } from './store';
+
 import HelloWorld from './components/HelloWorld.vue'
 // import { FooBar as FooBarChild } from './components';
+
+// 将上述 injection key 传入 useStore 方法可以获取类型化的 store
+const store = useStore();
+
 const handleChange = (msg) => {
   console.log(msg);
 }
 const hw = ref();
 onMounted(() => {
   console.log('hw: ', hw.value.child);
+  console.log('store', store.getters.getName);
+  
 })
 </script>
 
