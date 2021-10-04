@@ -1,6 +1,9 @@
 # vuex@4 + TS
 
 
+## 参考资料
+
+[官方文档](https://v3.cn.vuejs.org/guide/typescript-support.html#npm-%E5%8C%85%E4%B8%AD%E7%9A%84%E5%AE%98%E6%96%B9%E5%A3%B0%E6%98%8E)
 
 ## 1. Vue 组件中 $store 属性的类型声明
 
