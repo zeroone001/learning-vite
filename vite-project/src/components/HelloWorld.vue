@@ -1,13 +1,27 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
-defineProps<{ msg: string }>()
+defineProps({ 
+  msg: {
+    type: String
+  } 
+})
+
+const emits = defineEmits(['handleChange']);
+
+defineExpose({
+  child: 'child111'
+});
+const hClick = () => {
+  emits('handleChange', 'qweqw');
+}
 
 const count = ref(0)
+
 </script>
 
 <template>
-  <h1>{{ msg }}</h1>
+  <h1 @click="hClick">{{ msg }}</h1>
 
   <p>
     Recommended IDE setup:
