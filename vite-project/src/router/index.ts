@@ -10,7 +10,10 @@ const routes = [
             {
                 path: 'home',
                 name: 'home',
-                component: () => import("../pages/Home.vue")
+                component: () => import("../pages/Home.vue"),
+                meta: {
+                    title: '首页'
+                }
             }
         ]
     }

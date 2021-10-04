@@ -8,6 +8,12 @@
 
 ## router/index.ts
 
+
+
+createWebHashHistory: 创建一个hash 历史记录，对于没有主机的 web 应用程序 (例如 `file://`)，或当配置服务器不能处理任意 URL 时这非常有用。**注意：如果 SEO 对你很重要，你应该使用 [`createWebHistory`](https://next.router.vuejs.org/zh/api/#createwebhistory)**
+
+
+
 ```js
 import {createRouter, createWebHashHistory} from 'vue-router';
 import Layout from '../components/Layout.vue';

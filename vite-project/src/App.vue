@@ -6,27 +6,24 @@
 
 <script setup lang="ts">
 // 引入路由对象
-import { useRouter } from "vue-router";
-// https://v3.cn.vuejs.org/api/sfc-script-setup.html#%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95
-/*  */
-// import { ref, onMounted } from 'vue';
-// // import { useStore } from 'vuex';
-// import { useStore } from './store';
-// import HelloWorld from './components/HelloWorld.vue'
+/*
+ useRouter： 返回 router 实例。相当于在模板中使用 $router。必须在 setup() 中调用。
+ */
+import { onMounted } from 'vue';
+import { useRouter, useRoute } from "vue-router";
+
 // 实例化路由
 let router = useRouter();
-// 将上述 injection key 传入 useStore 方法可以获取类型化的 store
-// const store = useStore();
 
-// const handleChange = (msg) => {
-//   console.log(msg);
-// }
-// const hw = ref();
-// onMounted(() => {
-//   console.log('hw: ', hw.value.child);
-//   console.log('store', store.getters.getName);
-  
-// })
+const route = useRoute();
+
+onMounted(()=> {
+  console.log('router____>', router);
+
+  console.log('route: ', route.fullPath);
+})
+
+
 </script>
 
 <style>
