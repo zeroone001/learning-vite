@@ -43,7 +43,7 @@ export default ({ command, mode }) => {
         /* CSS 预处理器 */
         preprocessorOptions: {
           scss: {
-            // additionalData: `$injectedColor: orange;`
+            additionalData: '@import "src/assets/styles/global.scss";'
           }
         }
       },
