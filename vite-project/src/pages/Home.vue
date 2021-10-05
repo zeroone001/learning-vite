@@ -2,6 +2,11 @@
 
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
+  <el-button type="info" plain>Info</el-button>
+    <el-button type="warning" plain>Warning</el-button>
+    <el-icon size="20" color="red">
+      <edit></edit>
+    </el-icon>
   <hello-world ref="hw" msg="Hello Vue 3 + TypeScript + Vite" @handleChange="handleChange" ></hello-world>
 </template>
 
