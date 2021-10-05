@@ -16,6 +16,8 @@ This template should help get you started developing with Vue 3 and Typescript i
 
 ```shell
 npm init @vitejs/app
+npm i @types/node -D
+ npm i node-sass sass -D
 ```
 
 

@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import { loadEnv } from 'vite';
 import path from 'path';
 
 // https://vitejs.dev/config/
@@ -8,7 +9,7 @@ export default ({ command, mode }) => {
       plugins: [vue()],
       server: {
         host: '0.0.0.0', /* 指定服务器主机名 */
-        port: 8087, /* 指定服务器端口 */
+        port: parseInt(loadEnv(mode, process.cwd()).VITE_APP_PORT), /* 指定服务器端口 */
         strictPort: true, /* 设为 true 时若端口已被占用则会直接退出 */
         // https: true, 
         open: '/', /* 在服务器启动时自动在浏览器中打开应用程序 */ 

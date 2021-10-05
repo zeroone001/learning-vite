@@ -1,5 +1,5 @@
 import {createRouter, createWebHashHistory} from 'vue-router';
-import Layout from '../components/Layout.vue';
+import Layout from 'src/components/Layout.vue';
 
 const routes = [
     {
@@ -10,7 +10,7 @@ const routes = [
             {
                 path: 'home',
                 name: 'home',
-                component: () => import("../pages/Home.vue"),
+                component: () => import("src/pages/Home.vue"),
                 meta: {
                     title: '首页'
                 }
