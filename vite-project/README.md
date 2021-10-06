@@ -27,7 +27,9 @@ npm i @types/node -D
 在setup语法糖中倒入组件，不需要注册声明，直接使用
 
 
+## 参考资料
 
+[2021年了，vite能投入生产了吗？vite.config.js配置踩坑](https://juejin.cn/post/6989475484551610381)
 
 
 

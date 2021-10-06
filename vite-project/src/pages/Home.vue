@@ -1,7 +1,7 @@
 
 
 <template>
-  <img alt="Vue logo" src="src/assets/logo.png" />
+  <img alt="Vue logo" src="/images/logo.png" />
   <el-button type="info" plain>Info</el-button>
     <el-button type="warning" plain>Warning</el-button>
     <el-icon :size="20" color="red">
