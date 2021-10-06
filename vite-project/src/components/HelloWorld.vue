@@ -9,15 +9,22 @@ defineProps({
 
 const emits = defineEmits(['handleChange']);
 
-defineExpose({
-  child: 'child111'
-});
 const hClick = () => {
   emits('handleChange', 'qweqw');
 }
 
 const count = ref(0)
 
+const open = () => {
+  console.log('112312123');
+}
+/* 
+  让父组件可以获取到属性和方法
+*/
+defineExpose({
+  child: 'child111',
+  open: open
+});
 </script>
 
 <template>

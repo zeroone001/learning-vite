@@ -4,10 +4,10 @@
   <img alt="Vue logo" src="src/assets/logo.png" />
   <el-button type="info" plain>Info</el-button>
     <el-button type="warning" plain>Warning</el-button>
-    <el-icon size="20" color="red">
+    <el-icon :size="20" color="red">
       <edit></edit>
     </el-icon>
-  <hello-world ref="hw" msg="Hello Vue 3 + TypeScript + Vite" @handleChange="handleChange" ></hello-world>
+   <hello-world ref="hw" msg="Hello Vue 3 + TypeScript + Vite" @handleChange="handleChange" ></hello-world>
 </template>
 
 <script setup lang="ts">
@@ -28,9 +28,12 @@ console.log('route----->', route.name);
 const handleChange = (msg: any) => {
   console.log(msg);
 }
+// const hw = ref<InstanceType<typeof HelloWorld>>();
 const hw = ref();
+
+
 onMounted(() => {
-  console.log('hw: ', hw.value.child);
+  console.log('hw2: ', hw.value.open());
   console.log('store', store.getters.getName);
   
 })

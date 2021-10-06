@@ -1,8 +1,12 @@
 <script setup lang="ts">
+import {ref} from 'vue';
+import FooBar from './FooBar.vue';
 
-
+const fb = ref<InstanceType<typeof FooBar>>();
+// fb.value?.count;
 </script>
 <template>
+    <FooBar ref="fb"></FooBar>
     <header class="header-a">
         我是头部
         <div class="header"></div>
@@ -12,6 +16,7 @@
     <footer>
         我是页尾
     </footer>
+
 </template>
 <style lang="scss" scoped>
 
