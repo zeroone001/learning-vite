@@ -16,6 +16,11 @@ import { useRouter, useRoute } from "vue-router";
 let router = useRouter();
 
 const route = useRoute();
+/*  */
+const mode = import.meta.env;
+
+console.log('mode:', mode.VITE_APP_PORT);
+
 
 onMounted(()=> {
   console.log('router____>', router);

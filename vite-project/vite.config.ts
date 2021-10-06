@@ -5,6 +5,8 @@ import path from 'path';
 
 // https://vitejs.dev/config/
 export default ({ command, mode }) => {
+  console.log('mode', mode);
+  
   return defineConfig({
       plugins: [vue()],
       server: {
@@ -49,7 +51,12 @@ export default ({ command, mode }) => {
         }
       },
       build: {
+        assetsDir: 'resources', /* 指定生成静态资源的存放路径 */
+        outDir: 'dist', /* 指定输出路径 */
+        cssCodeSplit: false, /* 整个项目中的所有 CSS 将被提取到一个 CSS 文件中 */
         chunkSizeWarningLimit: 1500, /* chunk 大小警告的限制（以 kbs 为单位） */
+        sourcemap: true, /* 构建后是否生成 source map 文件 */
+        manifest: true, /*  */
       }
 
   })
