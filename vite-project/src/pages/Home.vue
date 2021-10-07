@@ -1,5 +1,3 @@
-
-
 <template>
   <img alt="Vue logo" src="/images/logo.png" />
   <el-button type="info" plain>Info</el-button>

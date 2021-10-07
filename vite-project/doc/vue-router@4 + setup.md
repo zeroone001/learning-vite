@@ -80,3 +80,6 @@ app.mount('#app');
 
 ```
 
+## 参考资料
+
+[vue-router 面试题](https://juejin.cn/post/6844903961745440775#heading-17)
