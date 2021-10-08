@@ -158,7 +158,19 @@ query: {}  // 一个 key/value 对象，表示 URL 查询参数。跟随在路�
 
 
 
+## Vue 路由怎么打开新的窗口
 
+```js
+const obj = {
+    path: xxx,//路由地址
+    query: {
+       mid: data.id//可以带参数
+    }
+};
+const {href} = this.$router.resolve(obj);
+window.open(href, '_blank');
+
+```
 
 
 
