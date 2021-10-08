@@ -30,6 +30,7 @@ const handleChange = (msg: string) => {
 // const hw = ref<InstanceType<typeof HelloWorld>>();
 const hw = ref();
 
+// let valModel = ref(true);
 
 onMounted(() => {
   console.log('hw2: ', hw.value.open());

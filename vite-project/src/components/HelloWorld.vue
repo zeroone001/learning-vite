@@ -4,7 +4,7 @@ import { ref } from 'vue'
 defineProps({ 
   msg: {
     type: String
-  } 
+  },
 })
 
 const emits = defineEmits(['handleChange']);
@@ -29,7 +29,6 @@ defineExpose({
 
 <template>
   <h1 @click="hClick">{{ msg }}</h1>
-
   <p>
     Recommended IDE setup:
     <a href="https://code.visualstudio.com/" target="_blank">VSCode</a>
