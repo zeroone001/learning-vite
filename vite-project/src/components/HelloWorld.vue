@@ -29,6 +29,7 @@ defineExpose({
 
 <template>
   <h1 @click="hClick">{{ msg }}</h1>
+  <slot name="content"></slot>
   <p>
     Recommended IDE setup:
     <a href="https://code.visualstudio.com/" target="_blank">VSCode</a>

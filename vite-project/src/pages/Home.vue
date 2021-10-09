@@ -5,7 +5,13 @@
     <el-icon :size="20" color="red">
       <edit></edit>
     </el-icon>
-   <hello-world ref="hw" msg="Hello Vue 3 + TypeScript + Vite" @handleChange="handleChange" ></hello-world>
+   <hello-world ref="hw" msg="Hello Vue 3 + TypeScript + Vite" @handleChange="handleChange" >
+     <template v-slot:content>
+       <div>
+         <span>这是slot {{ slotName }}</span>
+       </div>
+     </template>
+   </hello-world>
 </template>
 
 <script setup lang="ts">
@@ -32,6 +38,7 @@ const hw = ref();
 
 // let valModel = ref(true);
 
+let slotName = ref('slot---->');
 onMounted(() => {
   console.log('hw2: ', hw.value.open());
   console.log('store', store.getters.getName);
