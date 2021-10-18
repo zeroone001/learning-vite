@@ -26,6 +26,12 @@ onMounted(()=> {
   console.log('router____>', router);
 
   console.log('route: ', route.fullPath);
+  // fetch('/api').then((res) => res.json()).then((data) => {
+  //   console.log('data', data);
+  // })
+  fetch('/api2')
+  .then(response => response.json())
+  .then(json => console.log(json))
 })
 
 

@@ -39,13 +39,18 @@ export default ({ command, mode }) => {
           '/foo': 'http://localhost:4567/foo',
           // 选项写法
           '/api': {
-            target: 'http://jsonplaceholder.typicode.com',
+            target: 'https://jsonplaceholder.typicode.com/todos',
             changeOrigin: true,
             rewrite: (path) => path.replace(/^\/api/, '')
           },
+          '/api2': {
+            target: 'https://jsonplaceholder.typicode.com/users',
+            changeOrigin: true,
+            rewrite: (path) => path.replace(/^\/api2/, '')
+          },
           // 正则表达式写法
           '^/fallback/.*': {
-            target: 'http://jsonplaceholder.typicode.com',
+            target: 'https://jsonplaceholder.typicode.com/todos',
             changeOrigin: true,
             rewrite: (path) => path.replace(/^\/fallback/, '')
           }
