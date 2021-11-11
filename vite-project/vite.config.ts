@@ -18,6 +18,7 @@ export default ({ command, mode }) => {
         vue(), 
         eslintPlugin(),
         // https://github.com/vitejs/vite/tree/main/packages/plugin-legacy
+        /* 利用了babel, 来解决转成ES5的代码，因为esbuild 最低只支持到ES6 */
         legacy({
           targets: ['defaults', 'not IE 11']
         }),
