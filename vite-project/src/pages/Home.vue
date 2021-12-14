@@ -5,13 +5,14 @@
     <el-icon :size="20" color="red">
       <edit></edit>
     </el-icon>
-   <hello-world ref="hw" msg="Hello Vue 3 + TypeScript + Vite" @handleChange="handleChange" >
+    <div class="abc">刘永胜啦啦啦啦啦</div>
+   <!-- <hello-world ref="hw" msg="Hello Vue 3 + TypeScript + Vite" @handleChange="handleChange" >
      <template v-slot:content>
        <div>
          <span>这是slot {{ slotName }}</span>
        </div>
      </template>
-   </hello-world>
+   </hello-world> -->
 </template>
 
 <script setup lang="ts">
@@ -20,7 +21,7 @@
 import { ref, onMounted } from 'vue';
 // import { useStore } from 'vuex';
 import { useStore } from '../store';
-import HelloWorld from '../components/HelloWorld.vue'
+// import HelloWorld from '../components/HelloWorld.vue'
 // useRouter
 import { useRoute } from "vue-router";
 
@@ -46,7 +47,11 @@ onMounted(() => {
 })
 </script>
 
-<style>
+<style lang="scss">
+$color: red;
+.abc {
+  color: $injectedColor;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
