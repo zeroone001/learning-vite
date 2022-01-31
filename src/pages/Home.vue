@@ -20,7 +20,7 @@
 /*  */
 import { ref, onMounted } from 'vue';
 // import { useStore } from 'vuex';
-import { useStore } from '../store';
+import { useStore } from '@/store';
 // import HelloWorld from '../components/HelloWorld.vue'
 // useRouter
 import { useRoute } from "vue-router";
