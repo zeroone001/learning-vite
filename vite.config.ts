@@ -11,7 +11,6 @@ import PkgConfig from 'vite-plugin-package-config';
 // https://vitejs.dev/config/
 export default ({ command, mode }) => {
   console.log('mode', mode);
-  
   return defineConfig({
       base: './', /* 这个就是webpack里面的publicPath */
       plugins: [
